@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background-color:black
+        }
+        .main{
+            height:700px;
+            width:700px;
+            border-radius:50%;
+            border:2px solid;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            position:relative;
+            animation:spains 2s linear infinite;
+            
+        }
+        @keyframes spains{
+            to{
+                transform:rotate(360deg)
+            }
+        }
+        .sun{
+           
+            height:100px;
+            width:100px;
+            border-radius:50%;
+            background-color:rgb(239, 194, 16);
+            margin:0px;
+            box-shadow:0px 0px 100px 2px yellow;
+
+        }
+        .earthring{
+            position:absolute;
+             height:100px;
+            width:100px;
+            border-radius:50%;
+            border:2px solid black;
+            right:100%;
+            margin:-50px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            animation:spin 2s linear infinite;
+        }
+        @keyframes spin{
+        to{
+            transform:rotate(360deg)
+            }
+        }
+        .earth{
+             height:40px;
+            width:40px;
+            border-radius:50%;
+            background-image:url(earth.jpg);
+            background-size:cover;
+            
+        }
+        .moon{
+            position:absolute;
+            height:18px;
+            width:18px;
+            border-radius:50%;
+            background-color:aliceblue;
+            right:90%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sun"></div>
+        <div class="earthring">
+        <div class="earth"></div>
+        <div class="moon"></div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
